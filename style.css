@@ -5,6 +5,17 @@
     font-weight: 900;
     border-radius: 10px;
     text-align: center;
-    line-height: 100px;
+    line-height: 12.5vh;
     position: absolute;
+}
+#loading {
+    width: 40vw;
+    height: 10vh;
+    margin: 0;
+    font-size: 4vmin;
+    font-weight: bold;
+    line-height: 10vh;
+    position: absolute;
+    top: 45vh;
+    left: 30vw;
 }

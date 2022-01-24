@@ -2,7 +2,6 @@ function sound(src) {
     this.sound = document.createElement('audio')
     this.sound.setAttribute('preload', 'auto')
     this.sound.setAttribute('controls', 'none')
-    this.sound.setAttribute('autoplay', 'true')
     this.sound.style.display = 'none'
     this.source = document.createElement('source')
     this.source.setAttribute('src', src)

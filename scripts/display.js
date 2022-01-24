@@ -33,3 +33,22 @@ export function cancelBlank() {
         pitchCard.style.visibility = ''
     }
 }
+
+let interval
+
+export function displayLoading() {
+    displayBlank()
+    const loading =  document.querySelector('#loading')
+    loading.style.display = 'block'
+    let times = 0
+    interval = setInterval(() => {
+        times++
+        times %= 3
+        loading.innerHTML = 'Loading Audios' + '.'.repeat(times + 1)
+    }, 500)
+}
+
+export function hideLoading() {
+    cancelBlank()
+    document.querySelector('#loading').style.display = 'none'
+}

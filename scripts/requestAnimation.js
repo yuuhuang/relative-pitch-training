@@ -1,4 +1,12 @@
-import {displayLadder, displayOnePitch, displayBlank, cancelBlank, displayQuestion} from './display.js'
+import {
+    displayLadder,
+    displayOnePitch,
+    displayBlank,
+    cancelBlank,
+    displayQuestion,
+    displayLoading,
+    hideLoading
+} from './display.js'
 import {sounds} from './audio.js'
 
 const interval = 280
@@ -63,6 +71,9 @@ function loop(current) {
 
 }
 
+displayLoading()
+
 sounds[7].sound.onloadeddata = () => {
+    hideLoading()
     window.requestAnimationFrame(loop)
 }
