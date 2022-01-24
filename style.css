@@ -1,0 +1,10 @@
+#pitchCard {
+    width: 12.5vw;
+    height: 12.5vh;
+    font-size: 8vmin;
+    font-weight: 900;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+}
