@@ -63,4 +63,6 @@ function loop(current) {
 
 }
 
-window.requestAnimationFrame(loop)
+sounds[7].sound.onloadeddata = () => {
+    window.requestAnimationFrame(loop)
+}
