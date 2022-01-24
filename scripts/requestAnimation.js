@@ -57,6 +57,10 @@ function loop(current) {
     }
 
     window.requestAnimationFrame(loop)
+    sounds.map(item => {
+        console.log(item.sound.readyState)
+    })
+
 }
 
 window.requestAnimationFrame(loop)

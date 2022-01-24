@@ -1,17 +1,21 @@
 function sound(src) {
-    this.sound = document.createElement('audio');
-    this.sound.src = src;
-    this.sound.setAttribute('preload', 'auto');
-    this.sound.setAttribute('controls', 'none');
-    this.sound.style.display = 'none';
-    document.body.appendChild(this.sound);
+    this.sound = document.createElement('audio')
+    this.sound.setAttribute('preload', 'auto')
+    this.sound.setAttribute('controls', 'none')
+    this.sound.setAttribute('autoplay', 'true')
+    this.sound.style.display = 'none'
+    this.source = document.createElement('source')
+    this.source.setAttribute('src', src)
+    this.source.setAttribute('type', 'audio/mpeg')
+    this.sound.appendChild(this.source)
+    document.body.appendChild(this.sound)
     this.play = function(){
         stopAll()
-        this.sound.play();
+        this.sound.play()
     }
     this.stop = function(){
-        this.sound.pause();
-        this.sound.currentTime = 0;
+        this.sound.pause()
+        this.sound.currentTime = 0
     }
 }
 
