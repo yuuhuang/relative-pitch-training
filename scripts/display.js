@@ -40,7 +40,7 @@ export function displayLoading() {
     displayBlank()
     const loading =  document.querySelector('#loading')
     loading.style.display = 'block'
-    let times = 0
+    let times = -1
     interval = setInterval(() => {
         times++
         times %= 4
