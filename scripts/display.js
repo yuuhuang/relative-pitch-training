@@ -43,8 +43,8 @@ export function displayLoading() {
     let times = 0
     interval = setInterval(() => {
         times++
-        times %= 3
-        loading.innerHTML = 'Loading Audios' + '.'.repeat(times + 1)
+        times %= 4
+        loading.innerHTML = 'Loading Audios' + '.'.repeat(times)
     }, 500)
 }
 
